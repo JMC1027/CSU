@@ -1,0 +1,63 @@
+# START
+# INPUT number_of_years
+# WHILE number_of_years < 1
+#     DISPLAY "Invalid input. Enter a positive number of years."
+#     INPUT number_of_years
+# END WHILE
+# SET total_rainfall = 0
+# SET total_months = 0
+# FOR each year from 1 to number_of_years
+#     DISPLAY "Year " + year
+#     FOR each month from 1 to 12
+#         INPUT rainfall_amount
+#         WHILE rainfall_amount < 0
+#             DISPLAY "Rainfall cannot be negative."
+#             INPUT rainfall_amount
+#         END WHILE
+#         ADD rainfall_amount to total_rainfall
+#         ADD 1 to total_months
+#     END FOR
+# END FOR
+
+# SET average_rainfall = total_rainfall / total_months
+# DISPLAY "Total months: " + total_months
+# DISPLAY "Total rainfall: " + total_rainfall
+# DISPLAY "Average rainfall per month: " + average_rainfall
+# END
+# Ask user for number of years
+# Ask user for number of years
+
+
+num_years = int(input("Enter number of years: "))
+# Validate that the number of years is at least 1
+while num_years < 1:
+    print("Invalid input. Enter a positive number of years.")
+    num_years = int(input("Enter number of years: "))
+# Initialize total rainfall and total months counters
+total_rainfall = 0
+total_months = 0
+# Loop through each year
+for year in range(1, num_years + 1):   
+    # Print a blank line before years after the first
+    if year > 1:
+        print()   
+    # Display current year
+    print(f"Year {year}")  
+    # Loop through all 12 months of the year
+    for month in range(1, 13):     
+        # Ask user for rainfall for the current month
+        rainfall = float(input(f"Enter inches of rainfall for month {month}: "))    
+        # Validate that rainfall is not negative
+        while rainfall < 0:
+            print("Rainfall cannot be negative.")
+            rainfall = float(input(f"Enter inches of rainfall for month {month}: "))      
+        # Add rainfall to total and increment month counter
+        total_rainfall += rainfall
+        total_months += 1
+# Calculate average rainfall per month
+average_rainfall = total_rainfall / total_months
+# Display results
+print("\n--- Results ---")
+print(f"Total months: {total_months}")
+print(f"Total rainfall: {total_rainfall:.2f} inches")
+print(f"Average rainfall per month: {average_rainfall:.2f} inches")
