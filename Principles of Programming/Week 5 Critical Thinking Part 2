@@ -1,0 +1,71 @@
+# Ask the user for the number of books purchased
+# START
+# INPUT number_of_books
+# IF number_of_books <= 0 THEN
+#     SET points = 0
+# ELSE IF number_of_books <= 2 THEN
+#     SET points = 5
+# ELSE IF number_of_books <= 4 THEN
+#     SET points = 15
+# ELSE IF number_of_books <= 6 THEN
+#     SET points = 30
+# ELSE
+#     SET points = 60
+# END IF
+# DISPLAY points
+# END
+
+# books = int(input("Enter number of books purchased: "))
+# # Determine points based on number of books purchased
+# if books <= 0:
+#     # 0 or negative books earn 0 points
+#     points = 0
+# elif books <= 2:
+#     # 1–2 books earn 5 points
+#     points = 5
+# elif books <= 4:
+#     # 3–4 books earn 15 points
+#     points = 15
+# elif books <= 6:
+#     # 5–6 books earn 30 points
+#     points = 30
+# else:
+#     # 7 or more books earn 60 points
+#     points = 60
+# # Display the total points earned
+# print(f"Points earned: {points}")
+
+# Repeat the process for three customers
+
+# FOR count from 1 to 3
+#     INPUT number_of_books
+#     IF number_of_books <= 0 THEN
+#         SET points = 0
+#     ELSE IF number_of_books <= 2 THEN
+#         SET points = 5
+#     ELSE IF number_of_books <= 4 THEN
+#         SET points = 15
+#     ELSE IF number_of_books <= 6 THEN
+#         SET points = 30
+#     ELSE
+#         SET points = 60
+#     END IF
+#     DISPLAY points
+# END FOR
+# END
+
+for i in range(3):
+    books = int(input("Enter number of books purchased: "))
+    
+    if books <= 0:
+        points = 0
+    elif books <= 2:
+        points = 5
+    elif books <= 4:
+        points = 15
+    elif books <= 6:
+        points = 30
+    else:
+        points = 60
+
+    print(f"Points earned: {points}")
