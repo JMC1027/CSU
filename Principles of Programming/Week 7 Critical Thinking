@@ -1,0 +1,49 @@
+# Pseudocode:
+# 1. Create a dictionary mapping course numbers to room numbers
+# 2. Create a dictionary mapping course numbers to instructor names
+# 3. Create a dictionary mapping course numbers to meeting times
+# 4. Prompt the user to enter a course number
+# 5. Convert the input to uppercase so lookups are case-insensitive
+# 6. If the course number exists in the rooms dictionary:
+# a. Print the room number for that course
+# b. Print the instructor for that course
+# c. Print the meeting time for that course
+# 7. Otherwise, print "Course not found."
+
+# Maps course numbers to their assigned room numbers
+rooms = {
+    "CSC101": 3004,
+    "CSC102": 4501,
+    "CSC103": 6755,
+    "NET110": 1244,
+    "COM241": 1411
+}
+
+# Maps course numbers to their instructors
+instructors = {
+    "CSC101": "Haynes",
+    "CSC102": "Alvarado",
+    "CSC103": "Rich",
+    "NET110": "Burke",
+    "COM241": "Lee"
+}
+
+# Maps course numbers to their scheduled meeting times
+times = {
+    "CSC101": "8:00 a.m.",
+    "CSC102": "9:00 a.m.",
+    "CSC103": "10:00 a.m.",
+    "NET110": "11:00 a.m.",
+    "COM241": "1:00 p.m."
+}
+
+# Prompt the user for a course number and normalize to uppercase
+course = input("Enter a course number: ").upper()
+
+# Look up and display course details, or notify if not found
+if course in rooms:
+    print(f"Room:       {rooms[course]}")
+    print(f"Instructor: {instructors[course]}")
+    print(f"Time:       {times[course]}")
+else:
+    print("Course not found.")
